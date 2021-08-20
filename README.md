@@ -20,5 +20,5 @@ python manage.py migrate
 
 To start the server, use the command:
 ```shell
-python manage.py runserver
+python manage.py startbot
 ```
