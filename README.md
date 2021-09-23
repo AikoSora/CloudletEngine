@@ -1,6 +1,8 @@
 # CloudletEngine
 Platform for writing bots for VK `Python 3.7+`
 
+moved to https://github.com/SekaiTeam/cloudlet_engine
+
 ### Installing this project
 ```shell
 git clone https://github.com/YamioKDL/CloudletEngine.git
