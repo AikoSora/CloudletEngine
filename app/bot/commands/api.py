@@ -4,42 +4,44 @@ ______________________________________________________
 Cloudlet Engine - Asynchronous Engine!
 
 be sure to import! | Обязательны в каждом файле
+------------------------------
 from app.bot import handler
 from app.models import Account
+------------------------------
 
 Decorator: 
 handler -|- message(name=str, dialog=str, with_args=bool) # with_args требуется для получения аргументов в команде боту
-		 |- payload(name=str, dialog=str) # Dialog - указывает в каком диалоге работает команда
+         |- payload(name=str, dialog=str) # Dialog - указывает в каком диалоге работает команда
 
 Function:
 msg(text=str, attachment=str, sticker_id=int, user_id=int) - msg is an asynchronous function and is called via await!
 ----------------------------------------------------------
 msg -|- buttons(dict) - options = {"name": "name", "payload": "payload_command", "color": "primary/negative/positive/secondary"} / not asynchronous function
-	 |- inline_buttons(dict) - options = {"name": "name", "payload": "payload_command", "color": "primary/negative/positive/secondary"} / not asynchronous function
-	 |- request("method", params) - params = dict / request is an asynchronous function and is called via await!
-	 |- event - LongPoll event dict / variable 
+     |- inline_buttons(dict) - options = {"name": "name", "payload": "payload_command", "color": "primary/negative/positive/secondary"} / not asynchronous function
+     |- request("method", params) - params = dict / request is an asynchronous function and is called via await!
+     |- event - LongPoll event dict / variable 
 ______________________________________________________
 Building buttons|
 ________________|
 
 msg.buttons({"name": "1"})
-_____________________________
-|			   1			|
------------------------------
+________________________________________________
+|		       1	  		|
+------------------------------------------------
 
 msg.buttons({"name": "1"}, {"name": '2'})
-________________________________
+________________________________________________________
 |		1	   |		2		|
---------------------------------
+--------------------------------------------------------
 
 msg.buttons({"name": "1"}, {"name": '2'})
 msg.buttons({"name": "3"})
 
-________________________________
+________________________________________________________
 |		1	   |		2		|
---------------------------------
-|				3				|
----------------------------------
+--------------------------------------------------------
+|			   3				|
+--------------------------------------------------------
 
 With Inilne buttons as well.
 Buttons are built before calling the msg(text) function
