@@ -1,7 +1,6 @@
 # CloudletEngine
 Platform for writing bots for VK `Python 3.7+`
-
-moved to https://github.com/SekaiTeam/cloudlet_engine
+<i><br />moved to https://github.com/SekaiTeam/cloudlet_engine</i>
 
 ### Installing this project
 ```shell
@@ -24,3 +23,8 @@ To start the bot, use the command:
 ```shell
 python manage.py startbot
 ```
+
+### API
+
+Examples and API of the platform can be viewed [here](https://github.com/YamioKDL/CloudletEngine/blob/main/app/bot/commands/api.py)
+<br />Commands need to be created in Python files and saved along the path /app/bot/commands/
