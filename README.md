@@ -1,6 +1,5 @@
 # CloudletEngine
 Platform for writing bots for VK `Python 3.7+`
-<i><br />moved to https://github.com/SekaiTeam/cloudlet_engine</i>
 
 ### Installing this project
 ```shell
